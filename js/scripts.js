@@ -7,6 +7,22 @@
 // Scripts
 // 
 
+let backToTopButton = document.getElementById("backToTopButton");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction(){
+    if(document.body.scrollTop>10 || document.documentElement.scrollTop>10){
+        backToTopButton.style.display = "block";
+    }else{
+        backToTopButton.style.display = "none";
+    }
+
+}
+function topFunction(){
+    document.body.scrollTop = 0; //safari
+    document.documentElement.scrollTop = 0; //chrome, firefox, opera
+
+}
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
