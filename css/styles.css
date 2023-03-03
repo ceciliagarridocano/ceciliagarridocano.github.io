@@ -76,6 +76,31 @@
     scroll-behavior: smooth;
   }
 }
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  #mainSideNav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    
+    
+  }
+  #main{
+    position: static;
+    width: 100%;
+    padding-bottom: 75px;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  #mainSideNav a {
+    text-align: center;
+    float: none;
+  }
+}
 
 body {
   margin: 0;
@@ -101,7 +126,10 @@ hr {
 hr:not([size]) {
   height: 0.125rem;
 }
+h4{
 
+
+}
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -144,7 +172,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: var(--bs-primary);
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -721,7 +749,8 @@ a{
   
 }
 .img-fluid {
-  max-width: 100%;
+  margin:1rem;
+  max-width: 99%;
   height: auto;
 }
 .textOverlay{
@@ -4140,7 +4169,7 @@ row:after{
 }
 .column{
   align-items: center;
-  margin:10px;
+  margin:0.5rem;
   float:left;
   width: 32%;
 }
@@ -4157,6 +4186,19 @@ row:after{
 
   background:var(--bs-secondary);
   border: 10px var(--bs-primary);
+
+}
+.third-title{
+  padding:10px;
+  margin: auto;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  transition: .25s ease-in-out;
+  display: block;
+  font-size: large;
+  color:black;
+
 
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
@@ -8128,11 +8170,38 @@ row:after{
   background:white;
 
 }
+.littleLi{
+  padding:3px;
+  width:300px;
+  
+  margin: 0px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  transition: .25s ease-in-out;
+  display: block;
+  font-size:x-small;
+  color:black;
+  background:white;
+}
+img{
+  display:inline-block;
+  align-items: center;
+}
+figure{
+  display: inline-block;
+
+}
+figure figcaption{
+    text-align: center;
+}
 .rounded-1 {
   border-radius: 0.25rem !important;
 }
-.portfolioGrid{
-  margin:auto;
+#portfolioGrid{
+  
+  margin-top: 2rem;
+  padding-top: 1rem;
   padding:auto;
 }
 .rounded-2 {
